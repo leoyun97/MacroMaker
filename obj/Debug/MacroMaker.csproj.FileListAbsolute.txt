@@ -1,0 +1,11 @@
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\bin\Debug\MacroMaker.exe.config
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\bin\Debug\MacroMaker.exe
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\bin\Debug\MacroMaker.pdb
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.csproj.AssemblyReference.cache
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.csproj.SuggestedBindingRedirects.cache
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.Properties.Resources.resources
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.csproj.GenerateResource.cache
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.csproj.CoreCompileInputs.cache
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.exe
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.pdb
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.MainFrom.resources
