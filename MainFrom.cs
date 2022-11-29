@@ -25,25 +25,24 @@ namespace MacroMaker
         public MainFrom()
         {
             InitializeComponent();
-            timer1.Enabled = true;
 
         }
 
-        private void XaxisTEXT_TextChanged(object sender, EventArgs e)
-        {
+        public string XYpannelXYVal;
+        
 
-        }
 
-        private void YaxisTEXT_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             label3.Text = Cursor.Position.X.ToString();
             label4.Text = Cursor.Position.Y.ToString();
-            
+        }
+
+        private void MainFrom_Load(object sender, EventArgs e)
+        {
+            string[] xypointArr = XYpannelXYVal.Split(',');
+            label3.Text = xypointArr[0];
+            label4.Text = xypointArr[1];
         }
     }
 }

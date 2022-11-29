@@ -16,7 +16,8 @@ namespace MacroMaker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainFrom());
+            //Application.Run(new MainFrom());
+            Application.Run(new XYpannel());
         }
     }
 }

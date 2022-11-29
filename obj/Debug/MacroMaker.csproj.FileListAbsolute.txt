@@ -9,3 +9,4 @@ E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\Macro
 E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.exe
 E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.pdb
 E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.MainFrom.resources
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.XYpannel.resources

@@ -46,6 +46,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -92,10 +93,6 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // MainFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -109,6 +106,7 @@
             this.Controls.Add(this.button1);
             this.Name = "MainFrom";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainFrom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
