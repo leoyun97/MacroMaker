@@ -34,8 +34,10 @@ namespace MacroMaker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label3.Text = Cursor.Position.X.ToString();
-            label4.Text = Cursor.Position.Y.ToString();
+            this.Close();
+            XYpannel XYP = new XYpannel();
+            XYP.ShowDialog();
+            
         }
 
         private void MainFrom_Load(object sender, EventArgs e)
@@ -43,6 +45,13 @@ namespace MacroMaker
             string[] xypointArr = XYpannelXYVal.Split(',');
             label3.Text = xypointArr[0];
             label4.Text = xypointArr[1];
+            XYpannelXYVal = "";
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
