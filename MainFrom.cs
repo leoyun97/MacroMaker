@@ -51,7 +51,14 @@ namespace MacroMaker
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Cursor.Position = new Point(Convert.ToInt32(label3.Text.ToString()),Convert.ToInt32(label4.Text.ToString()));
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("성공!!");
         }
     }
 }
