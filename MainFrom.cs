@@ -36,12 +36,38 @@ namespace MacroMaker
         public string YaxisVal;
 
 
-        private void button1_Click(object sender, EventArgs e) // 좌표측정
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void openXYpannel() //좌표측정
         {
             this.Hide();
             XYpannel XYP = new XYpannel();
             XYP.ShowDialog();
             this.Close();
+        }
+
+        public void copyTointoVet() //지정 좌표에 붙여넣기
+        {
+            Cursor.Position = new Point(Convert.ToInt32(XaxisVal), Convert.ToInt32(YaxisVal));
+            mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+            SendKeys.SendWait("(^v)");
+            //SendKeys.SendWait("{ENTER}");
+        }
+
+
+        public void getTxtfromClip() // 메모장 내용 클립보드로 복사
+        {
+            string ReadNwWord = "wordEx1.txt";
+            string FulTxt = System.IO.File.ReadAllText(ReadNwWord);
+
+            Clipboard.SetText(FulTxt);
+
+            // 클립보드에서 text 가져오기
+            var CoBoTxt = Clipboard.GetText();
 
         }
 
@@ -56,34 +82,15 @@ namespace MacroMaker
 
         private void button2_Click(object sender, EventArgs e) // 클릭실행
         {
-          
-            Cursor.Position = new Point(Convert.ToInt32(XaxisVal), Convert.ToInt32(YaxisVal));
-            mouse_event(MOUSEEVENTF_LEFTDOWN| MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-            //mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-            //mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-
-            SendKeys.SendWait("(^v)");
-
-            //SendKeys.SendWait("(^v)");
-            //SendKeys.Send("{ENTER}");
+                      
         }
 
-   
-
- 
+    
 
 
         private void button3_Click(object sender, EventArgs e) //실행
         {
-            string ReadNwWord = "wordEx1.txt";
-            string FulTxt = System.IO.File.ReadAllText(ReadNwWord);
-
-            Clipboard.SetText(FulTxt);
-            
-            // 클립보드에서 text 가져오기
-            var CoBoTxt = Clipboard.GetText();
                        
-           
         }
 
 
@@ -92,7 +99,7 @@ namespace MacroMaker
         private void button4_Click(object sender, EventArgs e) //word파일 만들기
         {
 
-            string MakeNwWord = "wordEx1.rtf";
+            string MakeNwWord = "wordEx2.txt";
 
             string[] textVal = {XaxisVal.ToString(),YaxisVal.ToString()};
             System.IO.File.WriteAllLines(MakeNwWord,textVal);
@@ -100,6 +107,9 @@ namespace MacroMaker
 
         }
 
-     
+        private void 좌표선택ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openXYpannel();
+        }
     }
 }

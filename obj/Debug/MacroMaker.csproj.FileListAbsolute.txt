@@ -23,3 +23,15 @@ E:\프로그램\MacroMaker\obj\Debug\MacroMaker.csproj.CoreCompileInputs.cache
 E:\프로그램\MacroMaker\obj\Debug\MacroMaker.exe
 E:\프로그램\MacroMaker\obj\Debug\MacroMaker.pdb
 E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.Subform.resources
+F:\프로그램\c#프로그램\MacroMaker\bin\Debug\MacroMaker.exe.config
+F:\프로그램\c#프로그램\MacroMaker\bin\Debug\MacroMaker.exe
+F:\프로그램\c#프로그램\MacroMaker\bin\Debug\MacroMaker.pdb
+F:\프로그램\c#프로그램\MacroMaker\obj\Debug\MacroMaker.csprojAssemblyReference.cache
+F:\프로그램\c#프로그램\MacroMaker\obj\Debug\MacroMaker.MainFrom.resources
+F:\프로그램\c#프로그램\MacroMaker\obj\Debug\MacroMaker.Properties.Resources.resources
+F:\프로그램\c#프로그램\MacroMaker\obj\Debug\MacroMaker.Subform.resources
+F:\프로그램\c#프로그램\MacroMaker\obj\Debug\MacroMaker.XYpannel.resources
+F:\프로그램\c#프로그램\MacroMaker\obj\Debug\MacroMaker.csproj.GenerateResource.cache
+F:\프로그램\c#프로그램\MacroMaker\obj\Debug\MacroMaker.csproj.CoreCompileInputs.cache
+F:\프로그램\c#프로그램\MacroMaker\obj\Debug\MacroMaker.exe
+F:\프로그램\c#프로그램\MacroMaker\obj\Debug\MacroMaker.pdb
