@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using System.IO;
+using System.Threading;
+using System.Diagnostics;
+using System.Timers;
 
 namespace MacroMaker
 {
@@ -29,36 +32,74 @@ namespace MacroMaker
         }
 
         public string XYpannelXYVal;
-        
+        public string XaxisVal;
+        public string YaxisVal;
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // 좌표측정
         {
-            this.Close();
+            this.Hide();
             XYpannel XYP = new XYpannel();
             XYP.ShowDialog();
-            
+            this.Close();
+
         }
 
         private void MainFrom_Load(object sender, EventArgs e)
         {
             string[] xypointArr = XYpannelXYVal.Split(',');
-            label3.Text = xypointArr[0];
-            label4.Text = xypointArr[1];
+            XaxisVal = xypointArr[0];
+            YaxisVal = xypointArr[1];
             XYpannelXYVal = "";
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // 클릭실행
         {
-            Cursor.Position = new Point(Convert.ToInt32(label3.Text.ToString()),Convert.ToInt32(label4.Text.ToString()));
-            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+          
+            Cursor.Position = new Point(Convert.ToInt32(XaxisVal), Convert.ToInt32(YaxisVal));
+            mouse_event(MOUSEEVENTF_LEFTDOWN| MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+            //mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+            //mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+            SendKeys.SendWait("(^v)");
+
+            //SendKeys.SendWait("(^v)");
+            //SendKeys.Send("{ENTER}");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+   
+
+ 
+
+
+        private void button3_Click(object sender, EventArgs e) //실행
         {
-            MessageBox.Show("성공!!");
+            string ReadNwWord = "wordEx1.txt";
+            string FulTxt = System.IO.File.ReadAllText(ReadNwWord);
+
+            Clipboard.SetText(FulTxt);
+            
+            // 클립보드에서 text 가져오기
+            var CoBoTxt = Clipboard.GetText();
+                       
+           
         }
+
+
+
+       
+        private void button4_Click(object sender, EventArgs e) //word파일 만들기
+        {
+
+            string MakeNwWord = "wordEx1.rtf";
+
+            string[] textVal = {XaxisVal.ToString(),YaxisVal.ToString()};
+            System.IO.File.WriteAllLines(MakeNwWord,textVal);
+
+
+        }
+
+     
     }
 }

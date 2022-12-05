@@ -25,7 +25,7 @@ namespace MacroMaker
             this.Hide();
             MainFrom MF = new MainFrom();
             //MF.XYpannelXYVal = label1.Text.ToString()+","+label2.Text.ToString();
-            MF.XYpannelXYVal = e.X.ToString() +","+ e.Y.ToString(); 
+            MF.XYpannelXYVal = e.X.ToString() +","+ e.Y.ToString();
             MF.ShowDialog();
             this.Close();
         }

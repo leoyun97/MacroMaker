@@ -22,3 +22,4 @@ E:\프로그램\MacroMaker\obj\Debug\MacroMaker.csproj.GenerateResource.cache
 E:\프로그램\MacroMaker\obj\Debug\MacroMaker.csproj.CoreCompileInputs.cache
 E:\프로그램\MacroMaker\obj\Debug\MacroMaker.exe
 E:\프로그램\MacroMaker\obj\Debug\MacroMaker.pdb
+E:\proData\프로그램관련백업\My_C#프로그램\MacroMaker\obj\Debug\MacroMaker.Subform.resources
