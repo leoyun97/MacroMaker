@@ -38,7 +38,7 @@ namespace MacroMaker
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            openXYpannel();
         }
 
         public void openXYpannel() //좌표측정
@@ -53,9 +53,10 @@ namespace MacroMaker
         {
             Cursor.Position = new Point(Convert.ToInt32(XaxisVal), Convert.ToInt32(YaxisVal));
             mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-
+            Thread.Sleep(1000);
             SendKeys.SendWait("(^v)");
-            //SendKeys.SendWait("{ENTER}");
+            SendKeys.SendWait("{ENTER}");
+           // SendKeys.Flush();
         }
 
 
@@ -80,9 +81,13 @@ namespace MacroMaker
 
         }
 
+
         private void button2_Click(object sender, EventArgs e) // 클릭실행
         {
-                      
+            copyTointoVet(); //지정 좌표에 붙여넣기  
+
+            
+           
         }
 
     
@@ -90,7 +95,7 @@ namespace MacroMaker
 
         private void button3_Click(object sender, EventArgs e) //실행
         {
-                       
+           getTxtfromClip();
         }
 
 

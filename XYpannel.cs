@@ -19,12 +19,9 @@ namespace MacroMaker
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            //label1.Text = e.X.ToString();
-            //label2.Text = e.Y.ToString();
 
             this.Hide();
             MainFrom MF = new MainFrom();
-            //MF.XYpannelXYVal = label1.Text.ToString()+","+label2.Text.ToString();
             MF.XYpannelXYVal = e.X.ToString() +","+ e.Y.ToString();
             MF.ShowDialog();
             this.Close();
