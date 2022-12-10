@@ -1,9 +1,9 @@
-접종
-구토/설사
-Empty3
-Empty4
-Empty5
-Empty6
+Vx
+skin
+Vomit/Diarrhea
+Heath
+Operation
+Cardiac
 Empty7
 Empty8
 Empty9
