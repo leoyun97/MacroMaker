@@ -812,5 +812,23 @@ namespace MacroMaker
                 //}
             }
         }
+
+        private void FoldeOpenTab_Click(object sender, EventArgs e)
+        {
+            string pathName = Application.StartupPath;
+            if (!Directory.Exists(pathName))
+            {
+                MessageBox.Show("Root folder가 없거나 삭제되었음");
+            }
+            else
+            {
+                Process.Start(pathName);
+                
+                //FolderBrowserDialog FD = new FolderBrowserDialog();
+                //FD.SelectedPath= pathName;  
+                //FD.ShowDialog();
+            }
+
+        }
     }
 }

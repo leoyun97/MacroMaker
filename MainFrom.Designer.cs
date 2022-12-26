@@ -51,6 +51,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FoldeOpenTab = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,21 +72,23 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.버튼명입력ToolStripMenuItem,
-            this.contentsWriteToolStripMenuItem});
+            this.contentsWriteToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.FoldeOpenTab});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(164, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
             // 
             // 버튼명입력ToolStripMenuItem
             // 
             this.버튼명입력ToolStripMenuItem.Name = "버튼명입력ToolStripMenuItem";
-            this.버튼명입력ToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.버튼명입력ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.버튼명입력ToolStripMenuItem.Text = "버튼명입력/수정";
             this.버튼명입력ToolStripMenuItem.Click += new System.EventHandler(this.버튼명입력ToolStripMenuItem_Click);
             // 
             // contentsWriteToolStripMenuItem
             // 
             this.contentsWriteToolStripMenuItem.Name = "contentsWriteToolStripMenuItem";
-            this.contentsWriteToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.contentsWriteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contentsWriteToolStripMenuItem.Text = "내용입력/수정";
             this.contentsWriteToolStripMenuItem.Click += new System.EventHandler(this.contentsWriteToolStripMenuItem_Click);
             // 
@@ -366,6 +370,19 @@
             this.label12.Text = "Help(F1)";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "-------------";
+            // 
+            // FoldeOpenTab
+            // 
+            this.FoldeOpenTab.Name = "FoldeOpenTab";
+            this.FoldeOpenTab.Size = new System.Drawing.Size(180, 22);
+            this.FoldeOpenTab.Text = "파일위치열기";
+            this.FoldeOpenTab.Click += new System.EventHandler(this.FoldeOpenTab_Click);
+            // 
             // MainFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -428,6 +445,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem FoldeOpenTab;
     }
 }
 
