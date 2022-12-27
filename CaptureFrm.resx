@@ -117,14 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AspNetCoreModule" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AspNetCoreModule.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dragsave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dragsave.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wQAADsEBuJFr7QAAAj5JREFUOE+tku1LU2EYh48bEYwgCCKIIAZRFCFRBNLXPvUX+KGP1USiFULRC4Vt
+        s2KYOVvLjW2ttjGdzc6wUS6na7MdUgOdwwXmXhQlDMNwqC3P+fW8mAWKIHTDdR4eeH7Xc5/7HOF/V4U7
+        lIA3LOF5OIVnr/pB986OOBzBPrS2xfA00AObP7rGak4QhuwnMNh6nAUUyBvyS1awVFZQWpYxV1JQXWvg
+        Ahr+U67Q+3VBWZFRXpGxWJYxv8jDvdIYTp45h3/CdobzZXwtSFu0eN7A2NKJOqMPNTfc0BGmvyvoSa0K
+        aNtYsgClJoYj2Lte8JgITH8FuVkF3f1ZLvhoOwZ8awBm6vGh5SjCTj3ySTNyBLpOJMzIxh4g3X0PnyIm
+        SKIBydBdvHZd5gLJWgkUbrIwrZFskTzJ/YqCzPgUhscKGBiZQHLgM94lM4hGmjD7AwhadVzAghk9+Czs
+        RNBO1hQRpMjgUmTqEhaWJTI8CXMLEmbSAXydlxCwXOCCxKPDwJCOfUIqGE57sfIzgcmiiCKhUBCRL4SR
+        z4eRy4sYjTVjfDICf/N5Log/PMQE/BWIYNCFLtEE34trG2IzVsNHZqA/W8kFMfMBJuhrPMgEdB6b8aX9
+        NDvnqKmAWq1+IkTva5ngbcN+LiDz2IxRzyl2zq4TqMBKf0RtxLAPXfV7Id7eg85bu9FxfRfaru6Ev24H
+        vFc08FzaDvfFbXDWqtnNNKxSqdJEcIcKNIQquqEtbQEarqICWlSiJRzZAuS8oPkNhvhrJ8LLSDUAAAAA
+        SUVORK5CYII=
+</value>
   </data>
 </root>

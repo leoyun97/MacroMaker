@@ -34,6 +34,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.버튼명입력ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsWriteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FoldeOpenTab = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,8 +53,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.FoldeOpenTab = new System.Windows.Forms.ToolStripMenuItem();
+            this.EncryptorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bPMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.captureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,9 +78,13 @@
             this.버튼명입력ToolStripMenuItem,
             this.contentsWriteToolStripMenuItem,
             this.toolStripMenuItem2,
+            this.EncryptorToolStripMenuItem,
+            this.bPMToolStripMenuItem,
+            this.captureToolStripMenuItem,
+            this.toolStripMenuItem3,
             this.FoldeOpenTab});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 202);
             // 
             // 버튼명입력ToolStripMenuItem
             // 
@@ -91,6 +99,19 @@
             this.contentsWriteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contentsWriteToolStripMenuItem.Text = "내용입력/수정";
             this.contentsWriteToolStripMenuItem.Click += new System.EventHandler(this.contentsWriteToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "-------------";
+            // 
+            // FoldeOpenTab
+            // 
+            this.FoldeOpenTab.Name = "FoldeOpenTab";
+            this.FoldeOpenTab.Size = new System.Drawing.Size(180, 22);
+            this.FoldeOpenTab.Text = "파일위치열기";
+            this.FoldeOpenTab.Click += new System.EventHandler(this.FoldeOpenTab_Click);
             // 
             // label1
             // 
@@ -370,18 +391,32 @@
             this.label12.Text = "Help(F1)";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
-            // toolStripMenuItem2
+            // EncryptorToolStripMenuItem
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem2.Text = "-------------";
+            this.EncryptorToolStripMenuItem.Name = "EncryptorToolStripMenuItem";
+            this.EncryptorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.EncryptorToolStripMenuItem.Text = "Encryptor";
+            this.EncryptorToolStripMenuItem.Click += new System.EventHandler(this.EncryptorToolStripMenuItem_Click);
             // 
-            // FoldeOpenTab
+            // toolStripMenuItem3
             // 
-            this.FoldeOpenTab.Name = "FoldeOpenTab";
-            this.FoldeOpenTab.Size = new System.Drawing.Size(180, 22);
-            this.FoldeOpenTab.Text = "파일위치열기";
-            this.FoldeOpenTab.Click += new System.EventHandler(this.FoldeOpenTab_Click);
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem3.Text = "-------------";
+            // 
+            // bPMToolStripMenuItem
+            // 
+            this.bPMToolStripMenuItem.Name = "bPMToolStripMenuItem";
+            this.bPMToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bPMToolStripMenuItem.Text = "BPM";
+            this.bPMToolStripMenuItem.Click += new System.EventHandler(this.bPMToolStripMenuItem_Click);
+            // 
+            // captureToolStripMenuItem
+            // 
+            this.captureToolStripMenuItem.Name = "captureToolStripMenuItem";
+            this.captureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.captureToolStripMenuItem.Text = "Capture";
+            this.captureToolStripMenuItem.Click += new System.EventHandler(this.captureToolStripMenuItem_Click);
             // 
             // MainFrom
             // 
@@ -447,6 +482,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem FoldeOpenTab;
+        private System.Windows.Forms.ToolStripMenuItem EncryptorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem bPMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem captureToolStripMenuItem;
     }
 }
 

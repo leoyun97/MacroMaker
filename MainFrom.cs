@@ -16,6 +16,7 @@ using System.Net.Http.Headers;
 using System.Runtime.InteropServices.ComTypes;
 using System.Runtime.Remoting.Messaging;
 using Microsoft.VisualBasic;
+using ChartHelper;
 
 namespace MacroMaker
 {
@@ -39,9 +40,6 @@ namespace MacroMaker
         }
 
 
-
-
-
         public string XYpannelXYVal;
         public string XaxisVal;
         public string YaxisVal;
@@ -50,6 +48,8 @@ namespace MacroMaker
         public string[] btnNameList = { "Empty1", "Empty2", "Empty3", "Empty4", "Empty5", "Empty6", "Empty7", "Empty8", "Empty9", "Empty10" };
         public string SelectCom = "SelectCom.txt";
         public string comNo;
+        public string savePath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+        public string DbPath = "DbPath.txt";
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,9 +111,39 @@ namespace MacroMaker
             GetBtnName5(); //라벨이름이 있는 텍스트파일이 없다면 만들고
             IfLostRtfFile(); //rtf파일이 폴더에 없다면 만들고
             comboxNo(); // 콤보박스 selectindex 파일 없다면 만들고
+            capOption(); // 드래그 캡춰 경로파일 없으면 만들고 경로가 존재하는지도 확인
         }
 
-  
+        public void capOption() //드래그 캡춰에 필요한 경로 및 이미지 배율과 번역기 투명도
+        {
+            string[] OptList = { savePath, "100", "50" };
+
+            if (File.Exists(DbPath))
+            {
+                var lineCount = File.ReadLines(DbPath).Count();
+                if (lineCount == 3)
+                {
+                    String[] lines = File.ReadAllLines(DbPath);
+                    string capPath = lines[0];
+                    DirectoryInfo dirInfo = new DirectoryInfo(capPath);
+                    if (!dirInfo.Exists )
+                    {
+                        System.IO.File.WriteAllLines(DbPath, OptList);
+                    }
+
+                }
+                else
+                {
+                    System.IO.File.WriteAllLines(DbPath, OptList);
+                }
+
+
+            }
+            else if (!File.Exists(DbPath))
+            {
+                System.IO.File.WriteAllLines(DbPath, OptList);
+            }
+        }
 
         public void comboxNo()
         {
@@ -751,7 +781,7 @@ namespace MacroMaker
 
             switch (key)
             {
-                case Keys.A:
+                case Keys.Q:
                     if ((keyData & Keys.Control) != 0)
                     {
                         this.WindowState = FormWindowState.Minimized;
@@ -763,6 +793,33 @@ namespace MacroMaker
                     if ((keyData & Keys.Control) != 0)
                     {
                         label12_Click(this, null);
+                        return true;
+                    }
+                    break;
+
+                case Keys.T:
+                    if ((keyData & Keys.Control) != 0)
+                    {
+                        TranslatorFrm TransFrm = new TranslatorFrm();
+                        TransFrm.ShowDialog();
+                        return true;
+                    }
+                    break;
+
+                case Keys.H:
+                    if ((keyData & Keys.Control) != 0)
+                    {
+                        BpmFrm BFrm = new BpmFrm();
+                        BFrm.ShowDialog();
+                        return true;
+                    }
+                    break;
+
+                case Keys.A:
+                    if ((keyData & Keys.Control) != 0)
+                    {
+                        CaptureFrm CF = new CaptureFrm();
+                        CF.Show();
                         return true;
                     }
                     break;
@@ -779,7 +836,10 @@ namespace MacroMaker
                              + Environment.NewLine + "  2.  마우스 우클릭 후 내용변경 눌러 원하는 내용 입력 후 저장"
                              + Environment.NewLine + "  3.  버튼클릭 후 원하는 곳에 Ctrl+V 하세요"
                              + Environment.NewLine + "  4.  콤보박스 눌러서 버튼갯수 정하기(최대10개)"
-                             + Environment.NewLine+ Environment.NewLine + "Ctrl+A : 창내리기"
+                             + Environment.NewLine+ Environment.NewLine + "Ctrl+A : Drag & Save"
+                             + Environment.NewLine + "Ctrl+T : 한타/영타 번역기"
+                             + Environment.NewLine + "Ctrl+H : BPM 카운터"
+                             + Environment.NewLine + "Ctrl+Q : 최소화"
                              + Environment.NewLine + "Ctrl+F1 : 도움말"
                              , "Inform");
         }
@@ -829,6 +889,24 @@ namespace MacroMaker
                 //FD.ShowDialog();
             }
 
+        }
+
+        private void EncryptorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TranslatorFrm TransFrm = new TranslatorFrm();
+            TransFrm.ShowDialog();
+        }
+
+        private void bPMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BpmFrm BFrm = new BpmFrm();
+            BFrm.ShowDialog();
+        }
+
+        private void captureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CaptureFrm CF = new CaptureFrm();
+            CF.Show();
         }
     }
 }
