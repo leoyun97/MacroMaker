@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.VisualBasic;
 
 namespace ChartHelper
 {
@@ -16,6 +19,8 @@ namespace ChartHelper
         {
             InitializeComponent();
         }
+
+        string DbPath = "DbPath.txt";
 
         private static readonly char[] IniC = { 'ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ' };
         private static readonly string[] IniS = { "ㄱ", "ㄲ", "ㄴ", "ㄷ", "ㄸ", "ㄹ", "ㅁ", "ㅂ", "ㅃ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ" };
@@ -347,15 +352,65 @@ namespace ChartHelper
 
         private void TranslatorFrm_Load(object sender, EventArgs e)
         {
-            vScrollBar1.Value = 50;
-            this.Opacity = (double)vScrollBar1.Value / vScrollBar1.Maximum; ;
+           
+
+            if (File.Exists(DbPath))
+            {
+                string[] lines = File.ReadAllLines(DbPath);
+                if (Convert.ToInt16(lines[2])>0)
+                {
+                    label5.Text = lines[2];
+                    vScrollBar1.Value = Convert.ToInt16(lines[2]);
+                    this.Opacity = (double)vScrollBar1.Value / vScrollBar1.Maximum; ;
+                }
+                else
+                {
+                    vScrollBar1.Value = 50;
+                    this.Opacity = (double)vScrollBar1.Value / vScrollBar1.Maximum; ;
+                }
+
+
+            }
+            else if (!File.Exists(DbPath))
+            {
+                vScrollBar1.Value = 50;
+                this.Opacity = (double)vScrollBar1.Value / vScrollBar1.Maximum; ;
+            }
+
+            
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             this.Opacity = (double)vScrollBar1.Value / vScrollBar1.Maximum;
             //double db = (double)vScrollBar1.Value / vScrollBar1.Maximum;
-            //label1.Text = db.ToString();
+            //label5.Text = vScrollBar1.Value.ToString();
+            
         }
+
+        private void vScrollBar1_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Text = vScrollBar1.Value.ToString();
+
+            if (File.Exists(DbPath))
+            {
+                var lines = File.ReadAllLines(DbPath).Count();
+                if (lines==3)
+                {
+                    TxtlineChanger(label5.Text, DbPath, 3);
+                }
+                
+            }
+
+        }
+
+        static void TxtlineChanger(string newText, string fileName, int line_to_edit)
+        {
+            string[] arrLine = File.ReadAllLines(fileName);
+            arrLine[line_to_edit - 1] = newText;
+            File.WriteAllLines(fileName, arrLine);
+        }
+
+
     }
 }
