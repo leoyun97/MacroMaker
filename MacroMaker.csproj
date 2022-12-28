@@ -141,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="clipBD.ico" />
+    <None Include="Resources\cutting.ico" />
+    <None Include="Resources\stopwatch.ico" />
+    <None Include="Resources\transico.ico" />
     <None Include="Resources\dragsave.jpg" />
     <None Include="Resources\AspNetCoreModule.ico" />
     <None Include="Resources\folder.ico" />

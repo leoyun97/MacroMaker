@@ -797,7 +797,7 @@ namespace MacroMaker
                     }
                     break;
 
-                case Keys.T:
+                case Keys.E:
                     if ((keyData & Keys.Control) != 0)
                     {
                         TranslatorFrm TransFrm = new TranslatorFrm();
@@ -806,7 +806,7 @@ namespace MacroMaker
                     }
                     break;
 
-                case Keys.H:
+                case Keys.B:
                     if ((keyData & Keys.Control) != 0)
                     {
                         BpmFrm BFrm = new BpmFrm();
@@ -815,7 +815,7 @@ namespace MacroMaker
                     }
                     break;
 
-                case Keys.A:
+                case Keys.D:
                     if ((keyData & Keys.Control) != 0)
                     {
                         CaptureFrm CF = new CaptureFrm();

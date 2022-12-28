@@ -35,6 +35,8 @@
             this.버튼명입력ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsWriteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.captureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.FoldeOpenTab = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,9 +56,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.EncryptorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.bPMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.captureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,32 +84,46 @@
             this.toolStripMenuItem3,
             this.FoldeOpenTab});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 202);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(164, 180);
             // 
             // 버튼명입력ToolStripMenuItem
             // 
             this.버튼명입력ToolStripMenuItem.Name = "버튼명입력ToolStripMenuItem";
-            this.버튼명입력ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.버튼명입력ToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.버튼명입력ToolStripMenuItem.Text = "버튼명입력/수정";
             this.버튼명입력ToolStripMenuItem.Click += new System.EventHandler(this.버튼명입력ToolStripMenuItem_Click);
             // 
             // contentsWriteToolStripMenuItem
             // 
             this.contentsWriteToolStripMenuItem.Name = "contentsWriteToolStripMenuItem";
-            this.contentsWriteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contentsWriteToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.contentsWriteToolStripMenuItem.Text = "내용입력/수정";
             this.contentsWriteToolStripMenuItem.Click += new System.EventHandler(this.contentsWriteToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(163, 22);
             this.toolStripMenuItem2.Text = "-------------";
+            // 
+            // captureToolStripMenuItem
+            // 
+            this.captureToolStripMenuItem.Image = global::ChartHelper.Properties.Resources.cutting;
+            this.captureToolStripMenuItem.Name = "captureToolStripMenuItem";
+            this.captureToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.captureToolStripMenuItem.Text = "(D)rag&Save";
+            this.captureToolStripMenuItem.Click += new System.EventHandler(this.captureToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(163, 22);
+            this.toolStripMenuItem3.Text = "-------------";
             // 
             // FoldeOpenTab
             // 
             this.FoldeOpenTab.Name = "FoldeOpenTab";
-            this.FoldeOpenTab.Size = new System.Drawing.Size(180, 22);
+            this.FoldeOpenTab.Size = new System.Drawing.Size(163, 22);
             this.FoldeOpenTab.Text = "파일위치열기";
             this.FoldeOpenTab.Click += new System.EventHandler(this.FoldeOpenTab_Click);
             // 
@@ -393,30 +407,19 @@
             // 
             // EncryptorToolStripMenuItem
             // 
+            this.EncryptorToolStripMenuItem.Image = global::ChartHelper.Properties.Resources.transico;
             this.EncryptorToolStripMenuItem.Name = "EncryptorToolStripMenuItem";
-            this.EncryptorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.EncryptorToolStripMenuItem.Text = "Encryptor";
+            this.EncryptorToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.EncryptorToolStripMenuItem.Text = "(E)ncryptor";
             this.EncryptorToolStripMenuItem.Click += new System.EventHandler(this.EncryptorToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem3.Text = "-------------";
             // 
             // bPMToolStripMenuItem
             // 
+            this.bPMToolStripMenuItem.Image = global::ChartHelper.Properties.Resources.stopwatch;
             this.bPMToolStripMenuItem.Name = "bPMToolStripMenuItem";
-            this.bPMToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bPMToolStripMenuItem.Text = "BPM";
+            this.bPMToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.bPMToolStripMenuItem.Text = "(B)PM";
             this.bPMToolStripMenuItem.Click += new System.EventHandler(this.bPMToolStripMenuItem_Click);
-            // 
-            // captureToolStripMenuItem
-            // 
-            this.captureToolStripMenuItem.Name = "captureToolStripMenuItem";
-            this.captureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.captureToolStripMenuItem.Text = "Capture";
-            this.captureToolStripMenuItem.Click += new System.EventHandler(this.captureToolStripMenuItem_Click);
             // 
             // MainFrom
             // 

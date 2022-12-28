@@ -233,10 +233,6 @@ namespace ChartHelper
                     }
                     break;
 
-            }
-
-            switch (key)
-            {
                 case Keys.S:
                     if ((keyData & Keys.Control) != 0)
                     {
@@ -245,16 +241,21 @@ namespace ChartHelper
                         return true;
                     }
                     break;
-
-            }
-
-            switch (key)
-            {
+          
                 case Keys.D:
                     if ((keyData & Keys.Control) != 0)
                     {
 
                         DragFrmOpen();
+                        return true;
+                    }
+                    break;
+
+                case Keys.Q:
+                    if ((keyData & Keys.Control) != 0)
+                    {
+
+                        this.Close();
                         return true;
                     }
                     break;

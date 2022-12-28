@@ -116,21 +116,21 @@
             // 
             this.dragCaptureToolStripMenuItem.Name = "dragCaptureToolStripMenuItem";
             this.dragCaptureToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.dragCaptureToolStripMenuItem.Text = "Drag&Capture";
+            this.dragCaptureToolStripMenuItem.Text = "(D)rag&Capture";
             this.dragCaptureToolStripMenuItem.Click += new System.EventHandler(this.dragCaptureToolStripMenuItem_Click);
             // 
             // putImageToolStripMenuItem
             // 
             this.putImageToolStripMenuItem.Name = "putImageToolStripMenuItem";
             this.putImageToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.putImageToolStripMenuItem.Text = "PutImage";
+            this.putImageToolStripMenuItem.Text = "(V)PutImage";
             this.putImageToolStripMenuItem.Click += new System.EventHandler(this.putImageToolStripMenuItem_Click);
             // 
             // saveImageToolStripMenuItem
             // 
             this.saveImageToolStripMenuItem.Name = "saveImageToolStripMenuItem";
             this.saveImageToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.saveImageToolStripMenuItem.Text = "SaveImage";
+            this.saveImageToolStripMenuItem.Text = "(S)aveImage";
             this.saveImageToolStripMenuItem.Click += new System.EventHandler(this.saveImageToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
@@ -143,7 +143,7 @@
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Text = "(Q)uit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // button4
@@ -191,10 +191,11 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CaptureFrm";
-            this.Text = "CaptureFrm";
+            this.Text = "Drag&Save";
             this.Load += new System.EventHandler(this.CaptureFrm_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
